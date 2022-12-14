@@ -17,5 +17,4 @@ object Retrofit_Instance {
     val endUrl:EndUrl by lazy {
         retrofitInstance.build().create(EndUrl::class.java)
     }
-
 }

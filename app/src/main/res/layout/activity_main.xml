@@ -11,17 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity"
-        android:background="#DA9DB2">
+        >
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:src="@drawable/love2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_width="match_parent"
@@ -29,18 +30,22 @@
             android:id="@+id/et_ct_your_name"
             android:hint="Your Name"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="130dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            >
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/et_your_name"
-                android:backgroundTint="#FABEE9"/>
+                android:backgroundTint="#FABEE9"
+                android:inputType="textCapSentences"
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -55,22 +60,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/et_partner_name"
-                android:backgroundTint="#FABEE9"/>
+                android:backgroundTint="#FABEE9"
+                android:inputType="textCapSentences"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginTop="70dp"
             app:layout_constraintTop_toBottomOf="@id/et_ct_partner_name"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:text="Calculate Love"
+            android:textSize="20sp"
             android:textColor="#9E0E4D"
             android:textStyle="bold"
             android:id="@+id/btn_calculate"
-            android:backgroundTint="#9CEDD8DF"
+            android:backgroundTint="#6BFFEAEA"
             />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/et_ct_partner_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/tv_progress"
+            android:visibility="invisible"
+            android:layout_marginTop="70dp"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
